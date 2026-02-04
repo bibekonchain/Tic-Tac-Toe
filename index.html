@@ -8,14 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
 </head>
 
 <body>
     <div class="wrapper">
         <h1>Tic Tac Toe</h1>
         <h4>Turn for:</h4>
-        <div id="turn"><span id="X-turn">X</span><span id="O-turn">O</span></div>
+        <div id="turn">
+            <span id="X-turn">X</span>
+            <span id="O-turn">O</span>
+        </div>
         <div class="container">
             <button class="btn-move"></button>
             <button class="btn-move"></button>
@@ -26,14 +28,15 @@
             <button class="btn-move"></button>
             <button class="btn-move"></button>
             <button class="btn-move"></button>
-
         </div>
         <button id="btn-restart">Restart</button>
     </div>
+
     <div class="popup hide">
         <p id="message">Test message</p>
         <button id="btn-new-game">New Game</button>
     </div>
+
     <script src="script.js"></script>
 </body>
 
