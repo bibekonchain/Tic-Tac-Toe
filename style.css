@@ -1,57 +1,76 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
 }
-body{
+
+body {
     height: 100vh;
     background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-}
-html{
-    font-size: 16px;
-}
-.wrapper{
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.wrapper {
+    display: flex;
     flex-direction: column;
+    align-items: center;
     row-gap: 1em;
+    text-align: center;
 }
-#turn span{
-    margin:  auto;
-    padding: 10px;
+
+#turn span {
+    margin: 0 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: all 0.3s;
 }
-.container{
+
+.container {
     width: 70vmin;
     height: 70vmin;
     display: flex;
     flex-wrap: wrap;
     gap: 2vmin;
 }
-.btn-move{
+
+.btn-move {
     background-color: #ffffff;
     height: 22vmin;
     width: 22vmin;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     font-size: 12vmin;
     color: #d161ff;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
 }
-#btn-restart{
+
+.btn-move:hover:not(:disabled) {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(209, 97, 255, 0.5);
+}
+
+#btn-restart {
     font-size: 1.3em;
-    padding: 1em;
+    padding: 1em 2em;
     border-radius: 8px;
     background-color: #891652;
     color: #fff;
     border: none;
+    cursor: pointer;
+    transition: background 0.3s;
 }
-.popup{
+
+#btn-restart:hover {
+    background-color: #a21f70;
+}
+
+.popup {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -62,25 +81,41 @@ html{
     justify-content: center;
     flex-direction: column;
     gap: 1em;
-    font-size: 12vmin;
+    font-size: 2em;
 }
-#btn-new-game{
-    font-size: 0.6em;
-    padding: 0.5em 1em;
+
+#btn-new-game {
+    font-size: 1em;
+    padding: 0.5em 1.5em;
     background-color: #0a0027;
     color: #fff;
-    border-radius: 0.2em;
+    border-radius: 8px;
     border: none;
+    cursor: pointer;
+    transition: background 0.3s;
 }
-#message{
+
+#btn-new-game:hover {
+    background-color: #1a0050;
+}
+
+#message {
     color: #fff;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.5em;
 }
-.popup.hide{
+
+.popup.hide {
     display: none;
 }
-.glow{
+
+.glow {
     background-color: #74e291;
-    transition: background 0.5s;
+    box-shadow: 0 0 15px #74e291;
+}
+
+.winner {
+    background-color: #ffd700 !important;
+    color: #000;
+    box-shadow: 0 0 20px #ffd700 !important;
 }
